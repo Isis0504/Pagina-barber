@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .leather-texture {
+            background-color: #131313;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.02) 1px, transparent 0);
+            background-size: 4px 4px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e2e2e2",
+                        "surface-container-highest": "#353535",
+                        "surface-tint": "#e9c349",
+                        "surface-variant": "#353535",
+                        "on-primary-container": "#554300",
+                        "on-tertiary": "#303030",
+                        "surface-bright": "#393939",
+                        "outline-variant": "#4d4635",
+                        "surface": "#131313",
+                        "on-secondary-container": "#b7b5b4",
+                        "tertiary-container": "#b4b2b2",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-surface-variant": "#d0c5af",
+                        "primary": "#f2ca50",
+                        "on-primary-fixed": "#241a00",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#1f1f1f",
+                        "inverse-on-surface": "#303030",
+                        "outline": "#99907c",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-primary": "#3c2f00",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-secondary": "#313030",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#454545",
+                        "secondary-container": "#474746",
+                        "tertiary-fixed": "#e4e2e1",
+                        "surface-container-low": "#1b1b1b",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "secondary-fixed": "#e5e2e1",
+                        "inverse-primary": "#735c00",
+                        "primary-container": "#d4af37",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-background": "#e2e2e2",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary": "#d0cdcd",
+                        "secondary": "#c8c6c5",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "inverse-surface": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Epilogue"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Epilogue"],
+                        "headline-lg": ["Epilogue"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md leather-texture">
+<!-- TopAppBar -->
+<nav class="bg-black/90 backdrop-blur-md text-amber-500 docked full-width top-0 z-50 border-b border-neutral-800 flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-amber-500 cursor-pointer">menu</span>
+<span class="text-xl font-black text-amber-500 tracking-tighter italic">DISTRITO</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-epilogue font-bold tracking-widest uppercase text-amber-500 hover:text-amber-400 transition-colors" href="#">Inicio</a>
+<a class="font-epilogue font-bold tracking-widest uppercase text-neutral-400 hover:text-amber-400 transition-colors" href="#servicios">Servicios</a>
+<a class="font-epilogue font-bold tracking-widest uppercase text-neutral-400 hover:text-amber-400 transition-colors" href="#galeria">Galería</a>
+<a class="font-epilogue font-bold tracking-widest uppercase text-neutral-400 hover:text-amber-400 transition-colors" href="#equipo">Equipo</a>
+</div>
+<span class="material-symbols-outlined text-amber-500 cursor-pointer">account_circle</span>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[795px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Professional barber precisely detailing a client's beard in a high-end, moody barbershop with vintage leather chairs and warm amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzNCsCBkFniczhD8TKScHKco2E4C1G9Pyap9UQpaR9qQqSNVF2i2PNYm3midVXFEt8oqQDtVgO5kWXQwl5Jg-5nm7XFqV8h09XZrsJ-6gch_CKyAENgVZ5XdQbyn8X5KKuz4rRTkJrOMBv7VrQTJYzGsJDf6fb1IqHYgN7mhTRLq8OfJ1SWGVud5cBjJV4hlT3pC7B5zyaBYnW5YV-PUz3_YUseo-u69z6NjfikMRPYzoR3IZeVgnJ2L5_5PIU93dVcoueM8NZypU"/>
+<div class="relative z-20 text-center px-gutter max-w-4xl">
+<h1 class="font-headline-xl text-headline-xl text-white mb-6 uppercase tracking-tighter">Tu estilo habla por ti</h1>
+<p class="font-body-lg text-body-lg text-neutral-300 mb-10 max-w-2xl mx-auto">Cortes modernos, precisión y experiencia premium para el caballero contemporáneo.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary-container text-on-primary-container px-10 py-4 font-label-md text-label-md rounded-none uppercase tracking-widest hover:brightness-110 transition-all shadow-lg shadow-primary-container/20">
+                    Agenda tu cita ahora
+                </button>
+<button class="border border-primary text-primary px-10 py-4 font-label-md text-label-md rounded-none uppercase tracking-widest hover:bg-primary/10 transition-all">
+                    Ver Servicios
+                </button>
+</div>
+</div>
+</header>
+<!-- Services Section -->
+<section class="py-xl px-gutter bg-surface" id="servicios">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-[0.3em] mb-2 block">Rituales de Grooming</span>
+<h2 class="font-headline-lg text-headline-lg text-white uppercase italic">Servicios Exclusivos</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="bg-surface-container border-t-2 border-primary-container p-8 hover:transform hover:-translate-y-2 transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">content_cut</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Corte clásico</h3>
+<p class="font-body-sm text-body-sm text-neutral-400 mb-6">Tijera y peine con acabado tradicional para un perfil atemporal.</p>
+<div class="text-primary font-headline-md text-headline-md">$20.000</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container border-t-2 border-primary-container p-8 hover:transform hover:-translate-y-2 transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">electric_scooter</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Fade moderno</h3>
+<p class="font-body-sm text-body-sm text-neutral-400 mb-6">Degradado preciso con técnica de máquina y navaja de alta definición.</p>
+<div class="text-primary font-headline-md text-headline-md">$25.000</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container border-t-2 border-primary-container p-8 hover:transform hover:-translate-y-2 transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">face</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Barba premium</h3>
+<p class="font-body-sm text-body-sm text-neutral-400 mb-6">Ritual de toalla caliente, perfilado y aceites esenciales de lujo.</p>
+<div class="text-primary font-headline-md text-headline-md">$15.000</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section (Bento Grid Style) -->
+<section class="py-xl px-gutter bg-black" id="galeria">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-white mb-12 text-center uppercase tracking-widest">Nuestra Galería</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<div class="col-span-2 row-span-2 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Sharp side profile of a man with a clean skin fade and detailed beard line, urban cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7YYA2RHG_MnONdVxIa-CS_nzyCxExuJ1BNf3shYhxZP-vOrEOv3F8kNfmvDF-eHLtKUi8ksIEUBUnJl_2_lSq87a0yrnoRjxk7-PuXoubBe8cH0EqcrrlxUtVhdtk7cGSAVAIv9ILl7qQcTmvs762-s1BtflS9KqXBANyjTy_JIyTvmD2Zd-3RiAuXmcdNroCUURbouscNERYyiXwzWJpgu0FRiPpXiUE758GBgRUXtGYcn17GXtTBAM_nnuTjQHBi_ZPJQgQ4Qk"/>
+</div>
+<div class="col-span-2 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Close up of barber hand with silver scissors cutting hair, high contrast noir photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfKAEKLcPjlEW2YRWbsnzVSkDVN0rdG8zmHEs8pvPro-kJ0E0xDGeCfijUNKMFjOTmq4Fp7n7dm8Z8XbBdsERbiBKUI7W-d6k6I1SgCnjzMm5dCTZmDYUfGpW_4zKpQ-lyhDUmH8l208Sw7ePhR8TD4GlrJLjiMnq5arUqoNlxRTcblTwnFQgOoZujAhsfidh0jumPYfl4MDWFB_OGcsW2GDvRUWh9__pOUP08mUU-F-md4baiQHiItesAnooYLkV9fe11DwgQip0"/>
+</div>
+<div class="overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Modern pompadour hairstyle on a young man, sharp focus, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDY14cb2BtCstNinXxibdGxhevyOvyQW9vC3pkzTmvIDYIdBu-Q3OJP43vBCSu1OA0wQUDjv1gLhc0y164W_kXRpzdeqfK-l-2EmRQNzFEXhkrl6i5WtxlcH6YbkXSflu9-52IKquAwQiFEmzyxMaMrKrGEP6lVCMGmMChoSl3fmW3gMt7RWVSzBKiDnQOkQJ9FDE4FCwJvUSw5HNOWP3IcrtZBkLQ8V80YATH5kmregc7WblEMZncWRRJ9ZKL8k-Nx8nvc2EjS34"/>
+</div>
+<div class="overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Straight razor being sharpened on a leather strop, moody atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5u7916CN1VwFR6tFBXJVPlR6MPZS2rvuJDZwIG-gANeaAzIVi4HArGYxgTBtc4cmRtgQwb22VX0CBo3NOvRr1G6LHfPfM_jBg8zsKf7nzp38UMR78cZL2qy27DfU-YFp_UsqPUZbmnHlgh7l5tpXAm_o-5Y0uZK5LDhE5_MFMK8iDTbRJLTbocNlU9TqBeYbVQzM5JBCu5-VJ-GGO2jGJ8dxpGJP41id14ky8npTg9o14o40zb24Hu94kRQoqpQ99w6skCvMTI0c"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-xl px-gutter bg-surface" id="equipo">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<h2 class="font-headline-lg text-headline-lg text-white uppercase italic">Nuestros Maestros</h2>
+<p class="font-body-md text-body-md text-neutral-400 max-w-md">Profesionales con años de experiencia dedicados al arte de la barbería clásica y moderna.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+<div class="text-center group">
+<div class="relative mb-6 inline-block">
+<div class="absolute inset-0 border-2 border-primary rotate-3 group-hover:rotate-6 transition-transform"></div>
+<img class="w-64 h-80 object-cover relative z-10 grayscale group-hover:grayscale-0 transition-all" data-alt="Portrait of a professional male barber with tattoos and a stylish beard, looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKO3x0lTIM8l0LSb0K3I_kX_vsNQdNhwr0A_wqqQf7jLd2uOhINQ1jsW9GXlTHTflzk5MqamV5AXfZ9pTy-tE1Wmsti7GJ_CrfYUX4Foewanbad7FXR315AlTIGDM_jnSqO5UEOzLPxEHxbYQMRgi_VE-7UN6jolIvYi1YWIujZEkXiID4y_7uawnIWQ12FwN6W3_TvwltyRwUN3nSB9XpmXGUnXGClvp6Dd9tknRhITwEG4nf6mVnszwBePfP37ovLseUF2yoIzo"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Julian "El Mago"</h3>
+<span class="text-primary font-label-sm text-label-sm uppercase">Especialista en Fades</span>
+</div>
+<div class="text-center group">
+<div class="relative mb-6 inline-block">
+<div class="absolute inset-0 border-2 border-primary -rotate-3 group-hover:-rotate-6 transition-transform"></div>
+<img class="w-64 h-80 object-cover relative z-10 grayscale group-hover:grayscale-0 transition-all" data-alt="Professional barber with glasses and meticulous style, focus and precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0VDHV56BIli8GWAWo-RxNOXCe--7mTkQQGQ7BE1ETtGoNNnTyGMucRtaUqgxspVfBvrXA_qQJlW0hxECZgEynti-W-vY3d5j2HYc7HFqQKaB-MLXpzG8Xvfd3DwTopxZdRilnvwTeX9UGzdCn_GlSf_KXgWqTnWUhHj4Gv4vtW4xLJ7mAUjAmqDv_6wXETmNYo7vZd4smp2NKZzZITC2kw-wE0uZSOcu7u-z4SHzqjMY10pTb0ff5vFGDW6OidwKSwxhmdAmb_SY"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Mateo Cruz</h3>
+<span class="text-primary font-label-sm text-label-sm uppercase">Barba &amp; Navaja Tradicional</span>
+</div>
+<div class="text-center group">
+<div class="relative mb-6 inline-block">
+<div class="absolute inset-0 border-2 border-primary rotate-2 group-hover:rotate-4 transition-transform"></div>
+<img class="w-64 h-80 object-cover relative z-10 grayscale group-hover:grayscale-0 transition-all" data-alt="Young energetic barber with a modern haircut smiling at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCp-z0E7tWR3giS3n9urkcPmxXnyliiFGsORwaAOacxoWc432z22I-OQQikfoDEHWEr7jvBkeE1UWfVnWCB8DohdZK-3xeJ2IRsfi0TJ8BIfiT2U98B5B6ltprU4Ie5oIHLd3_7yElhdimM_0zXYlvjAlldsU757Yq70R3RjpTK7h8fhCOgnDtX4M0Hyg2F_v24bEqSjCg7gEJqdDQQBxX48-chHOA7YV-EmRrmPt5FIR9USSZVWV0JTJy366IOOXlQGg7Z5LGmeI"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">David Rivera</h3>
+<span class="text-primary font-label-sm text-label-sm uppercase">Estilo Urbano &amp; Freestyle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-xl px-gutter bg-black relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[400px] text-primary" data-weight="fill">format_quote</span>
+</div>
+<div class="max-w-3xl mx-auto relative z-10">
+<div class="bg-neutral-900/50 p-12 border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary text-6xl mb-6">format_quote</span>
+<p class="font-headline-md text-headline-md text-on-surface italic mb-8">"Salí con el mejor corte que me han hecho. La atención al detalle de Julián es de otro nivel, y el ambiente del club te hace sentir en un lugar exclusivo."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-1px bg-primary"></div>
+<span class="font-label-md text-label-md text-white uppercase tracking-widest">Andrés R. — Cliente frecuente</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl px-gutter bg-surface" id="contacto">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-8 uppercase italic">Visítanos</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<h4 class="text-white font-label-md text-label-md uppercase mb-1">Dirección</h4>
+<p class="text-neutral-400">Calle 85 #12-45, Barrio El Chicó, Bogotá</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<h4 class="text-white font-label-md text-label-md uppercase mb-1">Horarios</h4>
+<p class="text-neutral-400">Lunes - Sábado: 9:00 AM - 8:00 PM<br/>Domingos: 10:00 AM - 4:00 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<h4 class="text-white font-label-md text-label-md uppercase mb-1">Teléfono</h4>
+<p class="text-neutral-400">+57 300 123 4567</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<a class="inline-block bg-primary text-black px-8 py-3 font-label-md text-label-md uppercase font-black hover:bg-amber-400 transition-colors" href="https://www.google.com/maps/dir/?api=1&destination=Calle+85+%2312-45,+Bogot%C3%A1,+Colombia" target="_blank" rel="noreferrer">
+                        Cómo Llegar
+                    </a>
+</div>
+</div>
+<div class="h-[400px] bg-neutral-900 border border-neutral-800 relative overflow-hidden rounded-sm">
+<iframe class="w-full h-full" src="https://www.google.com/maps?q=Calle+85+%2312-45,+Bogota,+Colombia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black w-full py-20 px-8 border-t border-neutral-900 flex flex-col items-center text-center gap-4 mb-20">
+<span class="text-amber-500 font-black italic text-2xl tracking-tighter mb-4">DISTRITO BARBER CLUB</span>
+<div class="flex gap-8 mb-8">
+<a class="font-epilogue text-xs tracking-widest uppercase opacity-60 text-neutral-600 hover:text-amber-500 transition-all" href="#">Privacidad</a>
+<a class="font-epilogue text-xs tracking-widest uppercase opacity-60 text-neutral-600 hover:text-amber-500 transition-all" href="#">Términos</a>
+<a class="font-epilogue text-xs tracking-widest uppercase opacity-60 text-neutral-600 hover:text-amber-500 transition-all" href="#">Instagram</a>
+</div>
+<p class="font-epilogue text-xs tracking-widest uppercase opacity-60 text-neutral-600">© 2026 DISTRITO BARBER CLUB. EXCLUSIVIDAD URBANA.</p>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-neutral-900/95 backdrop-blur-lg border-t border-amber-500/20 shadow-[0_-4px_10px_rgba(212,175,55,0.1)] md:hidden">
+<a class="flex flex-col items-center justify-center text-amber-500 font-bold bg-amber-500/10 rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-epilogue text-[10px] uppercase font-medium tracking-tighter">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:bg-neutral-800" href="#servicios">
+<span class="material-symbols-outlined">content_cut</span>
+<span class="font-epilogue text-[10px] uppercase font-medium tracking-tighter">Servicios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:bg-neutral-800" href="#galeria">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="font-epilogue text-[10px] uppercase font-medium tracking-tighter">Galería</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:bg-neutral-800" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-epilogue text-[10px] uppercase font-medium tracking-tighter">Agendar</span>
+</a>
+</nav>
+<!-- FAB (Mobile/Desktop Contextual) -->
+<button class="fixed bottom-24 right-6 md:bottom-10 md:right-10 z-40 bg-primary-container text-on-primary-container w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">event</span>
+</button>
+</body></html>
